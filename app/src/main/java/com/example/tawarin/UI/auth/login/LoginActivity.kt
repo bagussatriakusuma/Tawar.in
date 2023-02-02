@@ -11,9 +11,8 @@ import androidx.activity.viewModels
 import androidx.core.widget.doAfterTextChanged
 import androidx.core.widget.doOnTextChanged
 import com.example.tawarin.R
-//import com.example.tawarin.UI.main.MainActivity
 import com.example.tawarin.UI.auth.register.RegisterActivity
-//import com.example.tawarin.UI.onboarding.OnBoardingActivity
+import com.example.tawarin.UI.main.MainActivity
 import com.example.tawarin.databinding.ActivityLoginBinding
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
@@ -48,13 +47,13 @@ class LoginActivity : AppCompatActivity() {
             binding.tilPassword.error = it
         }
 
-//        viewModel.shouldOpenHomePage.observe(this) {
-//            if (it) {
-//                val intent = Intent(this, MainActivity::class.java)
-//                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-//                startActivity(intent)
-//            }
-//        }
+        viewModel.shouldOpenHomePage.observe(this) {
+            if (it) {
+                val intent = Intent(this, MainActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+            }
+        }
 
         val dialogCustom = Dialog(this)
         dialogCustom.setContentView(R.layout.alert_loading)

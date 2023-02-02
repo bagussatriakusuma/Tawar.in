@@ -16,7 +16,7 @@
         android:theme="@style/Theme.Tawarin"
         tools:targetApi="31">
         <activity
-            android:name=".UI.MainActivity"
+            android:name=".UI.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
