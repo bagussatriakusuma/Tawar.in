@@ -27,33 +27,30 @@ class MainActivity : AppCompatActivity() {
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
-//                R.id.uploadProduct -> {
-//                    binding.bottomNavigationView.visibility = View.GONE
-//                }
-//                R.id.loginActivity -> {
-//                    binding.bottomNavigationView.visibility = View.GONE
-//                }
-//                R.id.registerActivity -> {
-//                    binding.bottomNavigationView.visibility = View.GONE
-//                }
-//                R.id.detailFragment -> {
-//                    binding.bottomNavigationView.visibility = View.GONE
-//                }
-//                R.id.previewFragment -> {
-//                    binding.bottomNavigationView.visibility = View.GONE
-//                }
-//                R.id.editProfileFragment -> {
-//                    binding.bottomNavigationView.visibility = View.GONE
-//                }
-//                R.id.updateProductFragment -> {
-//                    binding.bottomNavigationView.visibility = View.GONE
-//                }
-//                R.id.infoBargainFragment -> {
-//                    binding.bottomNavigationView.visibility = View.GONE
-//                }
-//                R.id.daftarJualFragment2 -> {
-//                    binding.bottomNavigationView.visibility = View.GONE
-//                }
+                R.id.uploadProduct -> {
+                    binding.bottomNavigationView.visibility = View.GONE
+                }
+                R.id.loginActivity -> {
+                    binding.bottomNavigationView.visibility = View.GONE
+                }
+                R.id.registerActivity -> {
+                    binding.bottomNavigationView.visibility = View.GONE
+                }
+                R.id.detailFragment -> {
+                    binding.bottomNavigationView.visibility = View.GONE
+                }
+                R.id.editProfileFragment -> {
+                    binding.bottomNavigationView.visibility = View.GONE
+                }
+                R.id.updateProductFragment -> {
+                    binding.bottomNavigationView.visibility = View.GONE
+                }
+                R.id.infoBargainFragment -> {
+                    binding.bottomNavigationView.visibility = View.GONE
+                }
+                R.id.daftarJualFragment -> {
+                    binding.bottomNavigationView.visibility = View.GONE
+                }
                 else -> {
                     binding.bottomNavigationView.visibility = View.VISIBLE
                 }

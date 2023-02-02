@@ -93,7 +93,7 @@ class AccountFragment : Fragment() {
         }
 
         binding.tvMySellList.setOnClickListener {
-//            findNavController().navigate(R.id.action_accountFragment_to_daftarJualFragment2)
+            findNavController().navigate(R.id.action_accountFragment_to_daftarJualFragment)
         }
     }
 }
