@@ -89,7 +89,7 @@ class AccountFragment : Fragment() {
         }
 
         binding.tvPostProduct.setOnClickListener {
-//            findNavController().navigate(R.id.action_accountFragment_to_uploadProduct)
+            findNavController().navigate(R.id.action_accountFragment_to_uploadProduct)
         }
 
         binding.tvMySellList.setOnClickListener {
