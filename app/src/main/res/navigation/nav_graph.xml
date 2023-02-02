@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/detailFragment">
+    app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.example.tawarin.UI.main.home.detailProduct.DetailFragment"
@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_detailFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_tawarFragment"
+            app:destination="@id/tawarFragment" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -21,10 +24,137 @@
         <action
             android:id="@+id/action_homeFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
     </fragment>
     <dialog
         android:id="@+id/tawarFragment"
         android:name="com.example.tawarin.UI.main.home.detailProduct.TawarFragment"
         android:label="fragment_tawar"
-        tools:layout="@layout/fragment_tawar" />
+        tools:layout="@layout/fragment_tawar" >
+        <action
+            android:id="@+id/action_tawarFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.example.tawarin.UI.main.categories.CategoriesFragment"
+        android:label="fragment_categories"
+        tools:layout="@layout/fragment_categories" >
+        <action
+            android:id="@+id/action_categoriesFragment_to_detailsCategoriesFragment"
+            app:destination="@id/detailsCategoriesFragment" />
+        <action
+            android:id="@+id/action_categoriesFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_categoriesFragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsCategoriesFragment"
+        android:name="com.example.tawarin.UI.main.categories.DetailsCategoriesFragment"
+        android:label="fragment_details_categories"
+        tools:layout="@layout/fragment_details_categories" >
+        <action
+            android:id="@+id/action_detailsCategoriesFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstOnBoardingFragment"
+        android:name="com.example.tawarin.UI.onboarding.FirstOnBoardingFragment"
+        android:label="fragment_first_on_boarding"
+        tools:layout="@layout/fragment_first_on_boarding" >
+        <action
+            android:id="@+id/action_firstOnBoardingFragment_to_secondOnBoardingFragment"
+            app:destination="@id/secondOnBoardingFragment" />
+        <action
+            android:id="@+id/action_firstOnBoardingFragment_to_thirdOnBoardingFragment"
+            app:destination="@id/thirdOnBoardingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondOnBoardingFragment"
+        android:name="com.example.tawarin.UI.onboarding.SecondOnBoardingFragment"
+        android:label="fragment_second_on_boarding"
+        tools:layout="@layout/fragment_second_on_boarding" >
+        <action
+            android:id="@+id/action_secondOnBoardingFragment_to_thirdOnBoardingFragment"
+            app:destination="@id/thirdOnBoardingFragment" />
+        <action
+            android:id="@+id/action_secondOnBoardingFragment_to_firstOnBoardingFragment"
+            app:destination="@id/firstOnBoardingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdOnBoardingFragment"
+        android:name="com.example.tawarin.UI.onboarding.ThirdOnBoardingFragment"
+        android:label="fragment_third_on_boarding"
+        tools:layout="@layout/fragment_third_on_boarding" >
+        <action
+            android:id="@+id/action_thirdOnBoardingFragment_to_secondOnBoardingFragment"
+            app:destination="@id/secondOnBoardingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/acceptedFragment"
+        android:name="com.example.tawarin.UI.main.account.myBargain.AcceptedFragment"
+        android:label="fragment_accepted"
+        tools:layout="@layout/fragment_accepted" >
+        <action
+            android:id="@+id/action_acceptedFragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.tawarin.UI.main.account.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_accountFragment_to_acceptedFragment"
+            app:destination="@id/acceptedFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_declinedFragment"
+            app:destination="@id/declinedFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_pendingFragment"
+            app:destination="@id/pendingFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/declinedFragment"
+        android:name="com.example.tawarin.UI.main.account.myBargain.DeclinedFragment"
+        android:label="fragment_declined"
+        tools:layout="@layout/fragment_declined" >
+        <action
+            android:id="@+id/action_declinedFragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.tawarin.UI.main.account.profile.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" >
+        <action
+            android:id="@+id/action_editProfileFragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pendingFragment"
+        android:name="com.example.tawarin.UI.main.account.myBargain.PendingFragment"
+        android:label="fragment_pending"
+        tools:layout="@layout/fragment_pending" >
+        <action
+            android:id="@+id/action_pendingFragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
+    </fragment>
 </navigation>

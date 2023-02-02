@@ -57,7 +57,7 @@ class CategoriesFragment : Fragment() {
                     putInt(CATEGORY_ID, data.id)
                     putString(CATEGORY_NAME, data.name)
                 }
-//                findNavController().navigate(R.id.action_categoriesFragment_to_detailsCategoriesFragment, bundleCategories)
+                findNavController().navigate(R.id.action_categoriesFragment_to_detailsCategoriesFragment, bundleCategories)
             }
         })
         binding.rvCategories.adapter = categoriesAdapter
