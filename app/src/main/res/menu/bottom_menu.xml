@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/icon_home"
+        android:title="Home"/>
+<!--    <item-->
+<!--        android:id="@+id/daftarJualFragment"-->
+<!--        android:icon="@drawable/icon_daftarjual"-->
+<!--        android:title="Categories"/>-->
+    <item
+        android:id="@+id/categoriesFragment"
+        android:icon="@drawable/icon_categories"
+        android:title="Categories"/>
+    <item
+        android:id="@+id/notifFragment"
+        android:icon="@drawable/icon_notif"
+        android:title="Notification"/>
+<!--    <item-->
+<!--        android:id="@+id/jualFragment"-->
+<!--        android:icon="@drawable/icon_add"-->
+<!--        android:title="Jual"/>-->
+    <item
+        android:id="@+id/accountFragment"
+        android:icon="@drawable/icon_akun"
+        android:title="Account" />
+</menu>
