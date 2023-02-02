@@ -5,6 +5,7 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tawarin.Data.local.UserDAO
 import com.example.tawarin.Database.UserDatabase
+import com.example.tawarin.Datastore.AuthDataStoreManager
 import com.example.tawarin.Utils.Constant
 import dagger.Module
 import dagger.Provides
@@ -37,9 +38,9 @@ class LocalStorageModule {
         )
     }
 
-//    @Singleton
-//    @Provides
-//    fun provideAuthDataStoreManager(@ApplicationContext context: Context): AuthDataStoreManager {
-//        return AuthDataStoreManager(context = context)
-//    }
+    @Singleton
+    @Provides
+    fun provideAuthDataStoreManager(@ApplicationContext context: Context): AuthDataStoreManager {
+        return AuthDataStoreManager(context = context)
+    }
 }

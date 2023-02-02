@@ -1,10 +1,11 @@
-package com.example.tawarin
+package com.example.tawarin.UI
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.example.tawarin.R
 import com.example.tawarin.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
