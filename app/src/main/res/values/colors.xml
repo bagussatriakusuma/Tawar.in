@@ -15,5 +15,5 @@
     <color name="error">#ff3333</color>
     <color name="color_main">#0096FF</color>
     <color name="color_second">#0096FF</color>
-    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true" >#D0D0D0</color>
+    <color name="mtrl_textinput_default_box_stroke_color">#D0D0D0</color>
 </resources>
